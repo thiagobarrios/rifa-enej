@@ -10,27 +10,49 @@
       padding: 20px;
       background-color: #001f6c;
     }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(10, 60px);
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
       gap: 10px;
     }
+
     .number {
       padding: 10px;
       border: 1px solid #ccc;
       text-align: center;
       cursor: pointer;
+      background-color: #ffffff10;
+      border-radius: 6px;
+      transition: transform 0.2s;
     }
+
+    .number:hover {
+      transform: scale(1.05);
+    }
+
     .sold {
       background-color: #f44336;
       color: white;
       cursor: not-allowed;
     }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+      }
+
+      .number {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Rifa para custeio dos gastos com o ENEJ<br>Valor R$ 5,00 para concorrer a R$ 200 (PIX).</h1>
-  <h2>Contato: (75) 99189-6365 - Thiago Barrios</h2>
+  <h1 style="font-size: 20px;">Rifa para custeio dos gastos com o ENEJ<br>R$ 5,00 para concorrer a R$ 200 (PIX)</h1>
+  <h2 style="font-size: 16px;">Contato: (75) 99189-6365 - Thiago Barrios</h2>
+
   <div class="grid" id="rifaGrid"></div>
 
   <script>
@@ -64,6 +86,6 @@
       grid.appendChild(div);
     }
   </script>
-<h2>Ainda existem outros números disponíveis (01-330)</h2>
+<h2>Ainda podem existir outros números disponíveis (do 01 ao 330). Verificar disponibilidade. </h2>
 </body>
 </html>
