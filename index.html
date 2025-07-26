@@ -2,29 +2,39 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rifa Digital</title>
   <style>
     body {
       color: white;
       font-family: sans-serif;
-      padding: 20px;
+      padding: 15px;
       background-color: #001f6c;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+      gap: 8px;
+      margin: 0 auto;
+      width: 100%;
     }
 
     .number {
-      padding: 2px;
+      padding: 5px;
       border: 1px solid #ccc;
       text-align: center;
       cursor: pointer;
       background-color: #ffffff10;
       border-radius: 6px;
       transition: transform 0.2s;
+      font-size: 14px;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .number:hover {
@@ -37,18 +47,36 @@
       cursor: not-allowed;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
       .grid {
-        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        gap: 6px;
       }
 
       .number {
-        font-size: 14px;
-        padding: 8px;
+        font-size: 12px;
+        padding: 4px;
+      }
+      
+      h1 {
+        font-size: 18px !important;
+      }
+      
+      h2 {
+        font-size: 13px !important;
       }
     }
-	
-	
+    
+    @media (max-width: 400px) {
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+        gap: 5px;
+      }
+      
+      .number {
+        font-size: 11px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -77,7 +105,6 @@
       229: 'Clebson Demetrio',
       238: 'Clebson Demetrio',
       239: 'Gisele Gabrielle'
-      
     };
 
     const grid = document.getElementById('rifaGrid');
