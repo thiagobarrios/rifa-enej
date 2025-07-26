@@ -13,18 +13,20 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      grid-template-columns: repeat(5, 1fr); /* 5 colunas fixas */
       gap: 10px;
+      max-width: 320px; /* limite de largura */
     }
 
     .number {
-      padding: 2px;
+      padding: 12px;
       border: 1px solid #ccc;
       text-align: center;
       cursor: pointer;
       background-color: #ffffff10;
       border-radius: 6px;
       transition: transform 0.2s;
+      font-size: 16px;
     }
 
     .number:hover {
@@ -38,19 +40,15 @@
     }
 
     @media (max-width: 600px) {
-      .grid {
-        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-      }
-
       .number {
         font-size: 14px;
-        padding: 8px;
+        padding: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <h1 style="font-size: 20px;">RIFA PARA CUSTEIO DOS GASTOS COM O ENEJ<br>R$ 5,00 (un) para concorrer a <big><big>R$ 200 (PIX)</big></big></h1>
+  <h1 style="font-size: 20px;">RIFA PARA CUSTEIO DOS GASTOS COM O ENEJ<br>R$ 5,00 (un) para concorrer a <big><big><big>R$ 200 (PIX)</big></big></big></h1>
   <h2 style="font-size: 20px;">Sorteio dia 06/08/2025<br></h2>
   <h2 style="font-size: 20px;">Contato: (75) 99189-6365 - Thiago Barrios<br></h2>
   <h2 style="font-size: 20px;"><br>Chave PIX (Celular): 75991896365<br></h2>
@@ -74,7 +72,6 @@
       229: 'Clebson Demetrio',
       238: 'Clebson Demetrio',
       239: 'Gisele Gabrielle'
-      
     };
 
     const grid = document.getElementById('rifaGrid');
@@ -100,7 +97,14 @@
       grid.appendChild(div);
     }
   </script>
-<br><h2 style="font-size: 13px;">Ainda podem existir outros números disponíveis (do 01 ao 330), favor, verificar a disponibilidade.<br><br>Caso os números não apareçam corretamente, tente rotacionar a visualização do celular.</h2><br><br>
-<a href="https://chat.whatsapp.com/Hc1U5n4HJWtIwBHb3W4Gaj?mode=r_c"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Acesse o grupo do WhatsApp</button></a>
+
+  <br>
+  <h2 style="font-size: 13px;">OBS 1: Ainda podem existir outros números disponíveis (do 01 ao 330), favor, verificar a disponibilidade.<br><br>OBS 2: Caso os números não apareçam corretamente, tente rotacionar a visualização do celular.</h2>
+  <br>
+  <a href="https://chat.whatsapp.com/Hc1U5n4HJWtIwBHb3W4Gaj?mode=r_c">
+    <button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">
+      Acesse o grupo do WhatsApp
+    </button>
+  </a>
 </body>
 </html>
